@@ -1,0 +1,76 @@
+Lab 5 
+
+SQL SERVER:
+
+Criar SCHEMA
+
+CREATE SCHEMA [SAPORI_LAB5]
+
+
+Criando tablela STAGE
+
+FATO ENTREVISTADO
+
+CREATE TABLE [SAPORI_LAB5].[FATO.ENTREVISTADOS](ID_entrevistados VARCHAR(MAX), 
+cafe_da_manha VARCHAR(MAX), 
+cafe VARCHAR(MAX), 
+bebida VARCHAR(MAX),
+batata_frita VARCHAR(MAX), 
+sopa VARCHAR(MAX), 
+calorias_piadina_frango VARCHAR(MAX), 
+calorias_pao_doce VARCHAR(MAX), 
+calorias_tortilla VARCHAR(MAX), 
+calorias_sanduiche VARCHAR(MAX),
+calorias_waffle VARCHAR(MAX),
+calorias_diarias VARCHAR(MAX),  
+verifica_valores_nutricionais VARCHAR(MAX));
+
+DIMENSÃO PESO_KG
+
+CREATE TABLE [SAPORI_LAB5].[DIM.PESO_KG](peso VARCHAR(MAX), 
+percepcao_peso VARCHAR(MAX), 
+vitamina VARCHAR(MAX), 
+atividade_fisica VARCHAR(MAX),
+pratica_esporte VARCHAR(MAX), 
+tipo_esporte VARCHAR(MAX));
+
+DIMENSÃO CONFORTO
+
+CREATE TABLE [SAPORI_LAB5].[DIM.CONFORTO](alimento_conforto VARCHAR(MAX), 
+motivo_alimento_conforto VARCHAR(MAX), 
+cozinha_infancia VARCHAR(MAX), 
+cozinha_favorita VARCHAR(MAX),
+comida_preferida_infancia VARCHAR(MAX), 
+comida_preferida_origem VARCHAR(MAX), 
+refeicao_jantar_amigo VARCHAR(MAX), 
+pais_cozinham VARCHAR(MAX), 
+frequencia_cozinha VARCHAR(MAX), 
+frequencia_come_fora VARCHAR(MAX),
+valor_pago_refeicao VARCHAR(MAX));
+
+DIMENSÃO PESSOA
+
+CREATE TABLE [SAPORI_LAB5].[DIM.PESSOA](emprego VARCHAR(MAX),
+renda VARCHAR(MAX),
+estado_civil VARCHAR(MAX), 
+nivel_instrucao_pai VARCHAR(MAX), 
+profissao_pai VARCHAR(MAX),
+nivel_instrucao_mae VARCHAR(MAX), 
+profissao_mae VARCHAR(MAX));
+
+DIMENSÃO COMIDA
+
+CREATE TABLE [SAPORI_LAB5].[DIM.COMIDA](comida_mundo VARCHAR(MAX), 
+comida_grega VARCHAR(MAX), 
+comida_indiana VARCHAR(MAX), 
+comida_italiana VARCHAR(MAX),
+comida_persa VARCHAR(MAX), 
+comida_tailandesa VARCHAR(MAX));
+
+DIMENSÃO DIETA
+
+CREATE TABLE [SAPORI_LAB5].[DIM.DIETA](dieta_atual VARCHAR(MAX), 
+dieta_ideal VARCHAR(MAX), 
+refeicao_saudavel VARCHAR(MAX), 
+come_fruta VARCHAR(MAX),
+come_vegetais VARCHAR(MAX));
